@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-blue
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+      color: blue
+  template:
+    metadata:
+      labels:
+        app: backend
+        color: blue
+    spec:
+      containers:
+      - name: backend
+        image: 548112056811.dkr.ecr.ap-south-1.amazonaws.com/mern-backend:latest
+        ports:
+        - containerPort: 5000
+
