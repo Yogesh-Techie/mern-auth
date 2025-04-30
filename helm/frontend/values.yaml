@@ -1,0 +1,14 @@
+image:
+  repository: 548112056811.dkr.ecr.us-west-1.amazonaws.com/mern-frontend
+  tag: latest
+
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 80
+
+env:
+  API_URL: "http://mern-backend:80"  # This should match the backend service name in Kubernetes
+
+resources: {}

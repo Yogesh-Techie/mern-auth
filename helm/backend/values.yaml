@@ -1,0 +1,16 @@
+image:
+  repository: 548112056811.dkr.ecr.us-west-1.amazonaws.com/mern-backend
+  tag: latest
+
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 80
+
+env:
+  MONGODB_URI: "mongodb+srv://yogi:Mischief1999@mern-auth.qjt4f38.mongodb.net/?retryWrites=true&w=majority&appName=mern-auth"
+  JWT_SECRET: "atgFTklv23tkHFHl6TfRanUolSvtICZ/hyYajCER/wc=="  # Use ExternalSecrets or CSI driver to mount this securely
+  NODE_ENV: "production"
+
+resources: {}
