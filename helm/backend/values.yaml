@@ -10,7 +10,7 @@ service:
 
 env:
   MONGODB_URI: "mongodb+srv://yogi:Mischief1999@mern-auth.qjt4f38.mongodb.net/?retryWrites=true&w=majority&appName=mern-auth"
-  JWT_SECRET: "atgFTklv23tkHFHl6TfRanUolSvtICZ/hyYajCER/wc=="  # Use ExternalSecrets or CSI driver to mount this securely
+  JWT_SECRET: "a112899f447ae827162152318f0b40b37f3dccd7cf5769aa1b8fbbcef61aeb601"  # Use ExternalSecrets or CSI driver to mount this securely
   NODE_ENV: "production"
 
 resources: {}
