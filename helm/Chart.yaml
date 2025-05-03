@@ -8,11 +8,11 @@ appVersion: "1.0.0"
 # This section is optional but can be helpful to define dependencies
 dependencies:
   - name: mongodb
-    version: "10.3.0"
+    version: "16.5.5"  # Updated version
     repository: "https://charts.bitnami.com/bitnami"
     condition: mongodb.enabled
   - name: redis
-    version: "15.6.0"
+    version: "20.13.4"  # Updated version
     repository: "https://charts.bitnami.com/bitnami"
     condition: redis.enabled
 
@@ -38,6 +38,6 @@ keywords:
 annotations:
   "helm.sh/chart": "mern-auth-0.1.0"
   "helm.sh/version": "v1.0"
-  
+
 # This version control is specific to Helm itself
 # No need to change unless creating a new version of this chart
