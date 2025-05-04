@@ -16,7 +16,9 @@ spec:
     spec:
       containers:
       - name: backend
-        image: 548112056811.dkr.ecr.ap-south-1.amazonaws.com/mern-backend:latest
+        image: 548112056811.dkr.ecr.us-west-1.amazonaws.com/mern-backend:latest
         ports:
         - containerPort: 5000
-
+      # If your nodes don't have IAM roles for ECR access, add this:
+      # imagePullSecrets:
+      # - name: ecr-secret
