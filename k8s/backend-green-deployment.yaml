@@ -16,6 +16,11 @@ spec:
     spec:
       containers:
       - name: backend
-        image: your-dockerhub-username/backend:latest
+        image: 548112056811.dkr.ecr.us-west-1.amazonaws.com/mern-backend:latest
         ports:
         - containerPort: 5000
+      imagePullSecrets:
+      - name: ecr-secret
+      # If needed, uncomment this to use an ECR pull secret:
+      # imagePullSecrets:
+      # - name: ecr-secret

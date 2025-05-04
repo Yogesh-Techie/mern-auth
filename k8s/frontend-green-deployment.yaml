@@ -16,6 +16,8 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: your-dockerhub-username/frontend:latest
+        image: 548112056811.dkr.ecr.us-west-1.amazonaws.com/mern-frontend:latest
         ports:
         - containerPort: 3000
+      imagePullSecrets:
+      - name: ecr-secret  # <-- Add this to use the secret for pulling the image

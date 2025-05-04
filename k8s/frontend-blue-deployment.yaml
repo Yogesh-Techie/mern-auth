@@ -16,7 +16,11 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: 548112056811.dkr.ecr.ap-south-1.amazonaws.com/mern-frontend:latest
+        image: 548112056811.dkr.ecr.us-west-1.amazonaws.com/mern-frontend:latest
         ports:
         - containerPort: 3000
-
+      imagePullSecrets:
+      - name: ecr-secret
+      # If using private ECR and your cluster needs auth:
+      # imagePullSecrets:
+      # - name: ecr-secret
