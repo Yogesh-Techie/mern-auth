@@ -4,13 +4,15 @@ image:
 
 replicaCount: 1
 
+version: blue  # ✅ Add version for blue-green deployment
+
 service:
   type: ClusterIP
-  port: 80
+  port: 5000  # ✅ Match Node.js backend exposed port
 
 env:
   MONGODB_URI: "mongodb+srv://yogi:Mischief1999@mern-auth.qjt4f38.mongodb.net/?retryWrites=true&w=majority&appName=mern-auth"
-  JWT_SECRET: "a112899f447ae827162152318f0b40b37f3dccd7cf5769aa1b8fbbcef61aeb601"  # Use ExternalSecrets or CSI driver to mount this securely
+  JWT_SECRET: "a112899f447ae827162152318f0b40b37f3dccd7cf5769aa1b8fbbcef61aeb601"
   NODE_ENV: "production"
 
 resources: {}

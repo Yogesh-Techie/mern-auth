@@ -4,11 +4,13 @@ image:
 
 replicaCount: 1
 
+version: blue  # ✅ Added version key to support blue/green Helm releases
+
 service:
   type: ClusterIP
   port: 80
 
 env:
-  API_URL: "http://mern-backend:80"  # This should match the backend service name in Kubernetes
+  API_URL: "http://backend-service:5000"  # ✅ Corrected to match backend service name & port
 
 resources: {}
